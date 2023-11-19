@@ -5,7 +5,7 @@ from products.models import Product
 from authentication.models import Client
 
 from efipay import EfiPay
-from setup.settings import EFI_CREDENTIALS, PIX_KEY
+from core.settings import EFI_CREDENTIALS, PIX_KEY
 
 from typing import Dict, List
 

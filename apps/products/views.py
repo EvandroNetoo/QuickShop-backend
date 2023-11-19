@@ -5,7 +5,7 @@ from django.shortcuts import get_object_or_404, render, redirect
 from django.http import HttpRequest, HttpResponse, FileResponse
 from django.contrib import messages
 from django.contrib.messages import constants
-from setup.settings import BASE_DIR
+from core.settings import BASE_DIR
 from apps.products.utils import crop_center_to_square
 from authentication.decorators import login_required, store_login_required
 from authentication.models import Store
