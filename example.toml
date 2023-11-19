@@ -1,0 +1,23 @@
+secret_key = 'CHANGEME'
+debug = true
+allowed_hosts = ['*']
+csrf_trusted_origins = []
+
+[database]
+name = 'CHANGEME'
+user = 'CHANGEME'
+password = 'CHANGEME'
+host = 'CHANGEME'
+port = 'CHANGEME'
+
+[payments]
+pix_key = 'CHANGEME'
+[payments.homologacao]
+certificate = 'certificates\homologacao\certificado-homologacao-QuickShop.pem'
+client_id = 'CHANGEME'
+client_secret = 'CHANGEME'
+
+[payments.producao]
+certificate = 'certificates\producao\certificado-producao-QuickShop.pem'
+client_id = 'CHANGEME'
+client_secret = 'CHANGEME'
