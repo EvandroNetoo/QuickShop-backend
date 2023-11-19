@@ -77,7 +77,7 @@ WSGI_APPLICATION = "core.wsgi.application"
 
 
 DATABASES = {
-    "default": {
+    "default": dj_database_url.config() if toml_data['deploy'] else {
         "ENGINE": "django.db.backends.sqlite3",
         "NAME": BASE_DIR / "db.sqlite3",
     }
@@ -128,15 +128,13 @@ USE_TZ = True
 
 STATIC_URL = "/static/"
 STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles")
-STATICFILES_DIRS = [os.path.join(BASE_DIR, "templates/static"), os.path.join(BASE_DIR, "media")]
+STATICFILES_DIRS = [os.path.join(BASE_DIR, "templates/static")]
 STATICFILES_STORAGE = "whitenoise.storage.CompressedManifestStaticFilesStorage"
 
 # Media files (Any arqs)
 
 MEDIA_ROOT = os.path.join(BASE_DIR, "media")
 MEDIA_URL = "/media/"
-WHITENOISE_AUTOREFRESH = True
-WHITENOISE_USE_FINDERS = True
 
 
 # Default primary key field type

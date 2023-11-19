@@ -1,3 +1,9 @@
+# Fly #
+.dockerignore
+Dockerfile
+fly.toml
+
+# Secrets #
 env.toml
 certificates/
 
